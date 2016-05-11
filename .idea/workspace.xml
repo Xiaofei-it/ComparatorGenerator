@@ -10,6 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="72eb8398-2d80-4dd5-897d-1454f1c7c1d1" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/comparator-generator/src/main/java/xiaofei/library/comparatorgenerator/ComparatorGenerator.java" afterPath="$PROJECT_DIR$/comparator-generator/src/main/java/xiaofei/library/comparatorgenerator/ComparatorGenerator.java" />
     </list>
     <ignored path="ComparatorGenerator.iws" />
@@ -34,8 +35,8 @@
       <file leaf-file-name="ComparatorGenerator.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/comparator-generator/src/main/java/xiaofei/library/comparatorgenerator/ComparatorGenerator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.9191375">
-              <caret line="105" column="27" selection-start-line="105" selection-start-column="27" selection-end-line="105" selection-end-column="27" />
+            <state vertical-scroll-proportion="1.0808625">
+              <caret line="101" column="89" selection-start-line="101" selection-start-column="89" selection-end-line="101" selection-end-column="89" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1586#1798#0" expanded="true" />
@@ -2910,8 +2911,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/comparator-generator/src/main/java/xiaofei/library/comparatorgenerator/ComparatorGenerator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9191375">
-          <caret line="105" column="27" selection-start-line="105" selection-start-column="27" selection-end-line="105" selection-end-column="27" />
+        <state vertical-scroll-proportion="1.0808625">
+          <caret line="101" column="89" selection-start-line="101" selection-start-column="89" selection-end-line="101" selection-end-column="89" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1586#1798#0" expanded="true" />

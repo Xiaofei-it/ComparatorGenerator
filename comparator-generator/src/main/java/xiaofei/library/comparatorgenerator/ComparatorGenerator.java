@@ -66,8 +66,8 @@ public class ComparatorGenerator<T> {
     }
 
     public ComparatorGenerator<T> addCriterion(int priority, final String memberName, Order order) {
-        final Field field = xiaofei.library.comparatorgenerator.internal.TypeUtils.getField(clazz, memberName);
-        final Method method = xiaofei.library.comparatorgenerator.internal.TypeUtils.getMethod(clazz, memberName);
+        final Field field = TypeUtils.getField(clazz, memberName);
+        final Method method = TypeUtils.getMethod(clazz, memberName);
         if (field ==null && method == null) {
             throw new IllegalArgumentException("Member " + memberName + " does not exist.");
         }
@@ -77,7 +77,7 @@ public class ComparatorGenerator<T> {
         }
         Member member;
         if (field != null) {
-            xiaofei.library.comparatorgenerator.internal.TypeUtils.checkField(field);
+            TypeUtils.checkField(field);
             member = new FieldMember(field);
         } else {
             TypeUtils.checkMethod(method);

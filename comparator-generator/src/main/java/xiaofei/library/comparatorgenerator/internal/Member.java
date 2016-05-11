@@ -16,19 +16,16 @@
  *
  */
 
-package xiaofei.library.comparatorgenerator;
+package xiaofei.library.comparatorgenerator.internal;
 
-import java.lang.annotation.ElementType;
-import java.lang.annotation.Retention;
-import java.lang.annotation.RetentionPolicy;
-import java.lang.annotation.Target;
+/**
+ * Created by Xiaofei on 16/5/11.
+ */
+public interface Member {
 
-@Target({ElementType.FIELD, ElementType.METHOD})
-@Retention(RetentionPolicy.RUNTIME)
-public @interface Criterion {
+    String getName();
 
-    int priority() default 0;
+    Object getValue(Object object);
 
-    Order order() default Order.ASCENDING;
-
+    Class<?> getType();
 }

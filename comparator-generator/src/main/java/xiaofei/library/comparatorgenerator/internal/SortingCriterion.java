@@ -16,19 +16,30 @@
  *
  */
 
-package xiaofei.library.comparatorgenerator;
+package xiaofei.library.comparatorgenerator.internal;
 
-import java.lang.annotation.ElementType;
-import java.lang.annotation.Retention;
-import java.lang.annotation.RetentionPolicy;
-import java.lang.annotation.Target;
+import xiaofei.library.comparatorgenerator.Order;
 
-@Target({ElementType.FIELD, ElementType.METHOD})
-@Retention(RetentionPolicy.RUNTIME)
-public @interface Criterion {
+/**
+ * Created by Xiaofei on 16/5/11.
+ */
+public class SortingCriterion {
 
-    int priority() default 0;
+    private Member member;
 
-    Order order() default Order.ASCENDING;
+    private Order order;
+
+    public SortingCriterion(Member value, Order order) {
+        this.member = value;
+        this.order = order;
+    }
+
+    public Member getMember() {
+        return member;
+    }
+
+    public Order getOrder() {
+        return order;
+    }
 
 }

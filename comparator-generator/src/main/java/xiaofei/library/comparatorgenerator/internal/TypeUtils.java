@@ -16,9 +16,10 @@
  *
  */
 
-package xiaofei.library.comparatorgenerator;
+package xiaofei.library.comparatorgenerator.internal;
 
 import java.lang.reflect.Field;
+import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -49,7 +50,37 @@ public class TypeUtils {
             }
         } catch (NoSuchFieldException e) {
             e.printStackTrace();
-        } catch (SecurityException e) {
+        }
+        return null;
+    }
+
+    private static boolean isNoArgMethod(Method method) {
+        Class<?>[] parameterTypes = method.getParameterTypes();
+        return parameterTypes == null || parameterTypes.length == 0;
+    }
+
+    public static List<Method> getNoArgMethods(Class<?> clazz) {
+        List<Method> result = new ArrayList<Method>();
+        for (Class<?> tmp = clazz; tmp != null && tmp != Object.class; tmp = tmp.getSuperclass()) {
+            Method[] methods = tmp.getDeclaredMethods();
+            for (Method method : methods) {
+                if (!method.isSynthetic() && isNoArgMethod(method)) {
+                    result.add(method);
+                }
+            }
+        }
+        return result;
+    }
+
+    public static Method getMethod(Class<?> clazz, String methodName) {
+        try {
+            for (Class<?> tmp = clazz; tmp != null && tmp != Object.class; tmp = tmp.getSuperclass()) {
+                Method method = clazz.getDeclaredMethod(methodName);
+                if (method != null) {
+                    return method;
+                }
+            }
+        } catch (NoSuchMethodException e) {
             e.printStackTrace();
         }
         return null;
@@ -61,6 +92,20 @@ public class TypeUtils {
             throw new RuntimeException(
                     "The field " + field.getName() + " is not a primitive type or does not implement the Comparable interface. "
                             + "It must be a primitive type or implement the Comparable interface.");
+        }
+    }
+
+    public static void checkMethod(Method method) {
+        Class<?> type = method.getReturnType();
+        if (!(Comparable.class.isAssignableFrom(type) || type.isPrimitive())) {
+            throw new RuntimeException(
+                    "The return type of the method " + method.getName() + " is not a primitive type or does not implement the Comparable interface. "
+                            + "It must be a primitive type or implement the Comparable interface.");
+        }
+        Class<?>[] parameterTypes = method.getParameterTypes();
+        if (parameterTypes.length > 0) {
+            throw new RuntimeException(
+                    "The method " + method.getName() + " has parameters. It must have no parameters.");
         }
     }
 

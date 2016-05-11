@@ -85,9 +85,9 @@ Suppose there is an array named items2. Then we can sort the array as the follow
 Comparator<Item2> comparator2 =
     new ComparatorGenerator<Item2>(Item2.class)
         .addCriterion(3, "price", Order.ASCENDING)
-	.addCriterion(2, "distance", Order.DESCENDING)
-	.addCriterion(1, "itemName") // The default sorting order is Order.ASCENDING.
-	.generate();
+        .addCriterion(2, "distance", Order.DESCENDING)
+        .addCriterion(1, "itemName") // The default sorting order is Order.ASCENDING.
+        .generate();
 Arrays.sort(items2, comparator2);
 ```
 
@@ -113,7 +113,7 @@ Suppose there is an array named items4. Then we can sort the array as the follow
 Comparator<Item4> comparator4 =
     new ComparatorGenerator<Item4>(Item4.class)
         .addCriterion(3, "getTotalPrice", Order.ASCENDING)
-	.addCriterion(2, "distance", Order.DESCENDING)
-	.generate();
+        .addCriterion(2, "distance", Order.DESCENDING)
+        .generate();
 Arrays.sort(items4, comparator4);
 ```

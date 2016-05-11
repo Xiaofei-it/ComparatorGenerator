@@ -28,6 +28,9 @@ public class FieldMember implements Member {
     private Field field;
 
     public FieldMember(Field field) {
+        if (!field.isAccessible()) {
+            field.setAccessible(true);
+        }
         this.field = field;
     }
 

@@ -29,6 +29,9 @@ public class MethodMember implements Member {
     private Method method;
 
     public MethodMember(Method method) {
+        if (!method.isAccessible()) {
+            method.setAccessible(true);
+        }
         this.method = method;
     }
 

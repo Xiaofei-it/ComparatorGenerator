@@ -6,18 +6,28 @@ import xiaofei.library.comparatorgenerator.ComparatorGenerator;
 import xiaofei.library.comparatorgenerator.Criterion;
 import xiaofei.library.comparatorgenerator.Order;
 
-public class Test01 {
-
+/**
+ * Created by Xiaofei on 16/5/11.
+ */
+public class Test03 {
     static class A {
-        @Criterion(priority = 1, order = Order.DESCENDING)
         int i;
-        @Criterion(priority = 0, order = Order.ASCENDING)
         int j;
-        //@Criterion(priority = -1)
+
         String b;
+
+        @Criterion(priority = 1, order = Order.DESCENDING)
+        int getI() {
+            return i;
+        }
+
+        @Criterion(priority = 0, order = Order.ASCENDING)
+        int getJ() {
+            return j;
+        }
     }
     public static void main(String[] args) {
-        System.out.println("Test01");
+        System.out.println("Test03");
         A[] a = new A[5];
         for (int i = 0; i < a.length; ++i) {
             a[i] = new A();
@@ -34,5 +44,4 @@ public class Test01 {
             System.out.println(a[i].i + " " + a[i].j + " " + a[i].b);
         }
     }
-
 }

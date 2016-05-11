@@ -42,7 +42,7 @@ public class AnnotationUtils {
                 SortingCriterion prev = map.put(priority, new SortingCriterion(new FieldMember(field), order));
                 if (prev != null) {
                     throw new RuntimeException(
-                            "The priority value " + priority + " has already been set to the field "
+                            "The priority value " + priority + " has already been set to the member "
                                     + prev.getMember().getName() + ". Please specify another priority value.");
                 }
             }
@@ -57,7 +57,7 @@ public class AnnotationUtils {
                 SortingCriterion prev = map.put(priority, new SortingCriterion(new MethodMember(method), order));
                 if (prev != null) {
                     throw new RuntimeException(
-                            "The priority value " + priority + " has already been set to the method "
+                            "The priority value " + priority + " has already been set to the member "
                                     + prev.getMember().getName() + ". Please specify another priority value.");
                 }
             }

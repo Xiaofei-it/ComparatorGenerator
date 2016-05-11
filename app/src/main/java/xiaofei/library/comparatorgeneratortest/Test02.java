@@ -28,6 +28,7 @@ public class Test02 {
 
 
     public static void main(String[] args) {
+        System.out.println("Test02");
         Item1[] items1 = new Item1[5];
         for (int i = 0; i < 5; i++) {
             items1[i] = new Item1();

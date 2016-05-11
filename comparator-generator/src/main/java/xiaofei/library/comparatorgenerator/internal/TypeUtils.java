@@ -49,7 +49,7 @@ public class TypeUtils {
                 }
             }
         } catch (NoSuchFieldException e) {
-            e.printStackTrace();
+
         }
         return null;
     }
@@ -81,7 +81,7 @@ public class TypeUtils {
                 }
             }
         } catch (NoSuchMethodException e) {
-            e.printStackTrace();
+
         }
         return null;
     }

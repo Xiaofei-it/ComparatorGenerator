@@ -66,13 +66,13 @@ public class ComparatorGenerator<T> {
     }
 
     public ComparatorGenerator<T> addCriterion(int priority, final String memberName, Order order) {
-        final Field field = TypeUtils.getField(clazz, memberName);
-        final Method method = TypeUtils.getMethod(clazz, memberName);
+        Field field = TypeUtils.getField(clazz, memberName);
+        Method method = TypeUtils.getMethod(clazz, memberName);
         if (field ==null && method == null) {
             throw new IllegalArgumentException("Member " + memberName + " does not exist.");
         }
         if (field != null && method != null) {
-            throw new IllegalArgumentException("A field and a method has the same name: " + memberName
+            throw new IllegalArgumentException("A field and a method have the same name: " + memberName
                     + ". Which one do you want?");
         }
         Member member;

@@ -7,6 +7,27 @@ A comparator is needed when sorting a list of elements of a specified class. But
 
 This helper class makes it easy for you to obtain a comparator. What you need to do is just specifying some criteria and then the helper class will give you a comparator.
 
+##Gradle
+
+
+```
+dependencies {
+    compile 'xiaofei.library:comparator-generator:1.1'
+}
+```
+
+##Maven
+
+```
+<dependency>
+  <groupId>xiaofei.library</groupId>
+  <artifactId>comparator-generator</artifactId>
+  <version>1.1</version>
+  <type>pom</type>
+</dependency>
+```
+
+
 ##Usage
 
 Often, elements are sorted by the values of some specified fields or the return values of some specified methods. A field or a method has a corresponding criterion. A criterion has a priority. The field or the method with a higher priority will be considered first when sorting. A criterion has also a sorting order, which, by default, is ascending.

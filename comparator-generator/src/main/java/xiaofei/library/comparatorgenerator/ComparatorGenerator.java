@@ -26,8 +26,14 @@ import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
 
-import xiaofei.library.comparatorgenerator.internal.*;
+import xiaofei.library.comparatorgenerator.internal.AnnotationUtils;
+import xiaofei.library.comparatorgenerator.internal.FieldMember;
+import xiaofei.library.comparatorgenerator.internal.GeneratedComparator;
+import xiaofei.library.comparatorgenerator.internal.Member;
+import xiaofei.library.comparatorgenerator.internal.MethodMember;
+import xiaofei.library.comparatorgenerator.internal.SortingCriterion;
 import xiaofei.library.comparatorgenerator.internal.TypeUtils;
+
 
 public class ComparatorGenerator<T> {
 
@@ -44,7 +50,7 @@ public class ComparatorGenerator<T> {
                         return -o1.compareTo(o2);
                     }
                 });
-        TreeMap<Integer, SortingCriterion> map = xiaofei.library.comparatorgenerator.internal.AnnotationUtils.getCriteriaIn(clazz);
+        TreeMap<Integer, SortingCriterion> map = AnnotationUtils.getCriteriaIn(clazz);
         for (Map.Entry<Integer, SortingCriterion> entry : map.entrySet()) {
             SortingCriterion prev = criteria.put(entry.getKey(), entry.getValue());
             if (prev != null) {
@@ -93,7 +99,7 @@ public class ComparatorGenerator<T> {
             throw new RuntimeException(
                     "There is no sorting criterion specified. "
                             + "Please specify at least one criterion "
-                            + "by adding @Criterion on the corresponing field or using "
+                            + "by adding @Criterion on the corresponding field or method or using "
                             + "ComparatorGenerator.addCriterion(int, String, Order).");
         }
         this.clazz = null;

@@ -1,6 +1,8 @@
 # ComparatorGenerator
 An easy-to-use helper class for generating a comparator for a specified class. Useful when sorting the instances of the specified class.
 
+[Chinese Readme 中文文档](https://github.com/Xiaofei-it/ComparatorGenerator/blob/master/README-ZH-CN.md)
+
 ##Features
 
 A comparator is needed when sorting a list of elements of a specified class. But it is difficult to write a comparator, especially in multiple-criteria sorting.

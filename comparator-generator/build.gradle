@@ -24,11 +24,10 @@ ext {
     allLicenses = ["Apache-2.0"]
 }
 
-targetCompatibility = '1.7'
-sourceCompatibility = '1.7'
-
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
+    targetCompatibility = '1.7'
+    sourceCompatibility = '1.7'
 }
 
 apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'

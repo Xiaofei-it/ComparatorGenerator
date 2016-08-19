@@ -28,5 +28,6 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="comparator-generator" exported="" />
+    <orderEntry type="library" exported="" name="annotation-processor.annotation-processor" level="project" />
   </component>
 </module>

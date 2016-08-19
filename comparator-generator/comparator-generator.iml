@@ -28,7 +28,5 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" exported="" name="comparator-generator.comparator-generator-1.1" level="project" />
-    <orderEntry type="library" exported="" name="comparator-generator.comparator-generator-1.1-javadoc" level="project" />
-    <orderEntry type="library" exported="" name="comparator-generator.comparator-generator-1.1-sources" level="project" />
   </component>
 </module>

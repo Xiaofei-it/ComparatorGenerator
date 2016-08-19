@@ -1,1 +1,1 @@
-include ':app', ':comparator-generator'
+include ':app', ':comparator-generator', ':annotation-processor'

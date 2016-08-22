@@ -2,6 +2,8 @@ package xiaofei.library.comparatorgeneratortest;
 
 import org.junit.Test;
 
+import java.lang.reflect.Field;
+
 import static org.junit.Assert.*;
 
 /**
@@ -9,7 +11,12 @@ import static org.junit.Assert.*;
  */
 public class ExampleUnitTest {
     @Test
-    public void addition_isCorrect() throws Exception {
-        assertEquals(4, 2 + 2);
+    public void f() throws Exception {
+        Class<?> clazz = Class.forName("xiaofei.library.comparatorgeneratortest.TestA$A");
+        Field field = clazz.getDeclaredField("i");
+        TestA testA = new TestA();
+        System.out.print(field.get(testA.a));
+        field.set(testA.a, 34);
+        System.out.print(field.get(testA.a));
     }
 }

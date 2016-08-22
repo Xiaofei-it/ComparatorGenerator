@@ -16,6 +16,15 @@ public class Test01 {
         //@Criterion(priority = -1)
         String b;
     }
+
+    class A2 {
+        @Criterion(priority = 1, order = Order.DESCENDING)
+        int i;
+        @Criterion(priority = 0, order = Order.ASCENDING)
+        int j;
+        //@Criterion(priority = -1)
+        String b;
+    }
     public static void main(String[] args) {
         System.out.println("Test01");
         A[] a = new A[5];

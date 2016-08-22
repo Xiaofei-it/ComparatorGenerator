@@ -92,7 +92,7 @@ public class AnnotationProcessor extends AbstractProcessor {
                                 Criterion annotation = element.getAnnotation(Criterion.class);
                                 Order order = annotation.order();
                                 int priority = annotation.priority();
-                                writer.write("        putCriterionForMethod(" + className + ".class, \"" + methodName + "\", " + priority + ", Order." + order +");\n");
+                                //writer.write("        putCriterionForMethod(" + className + ".class, \"" + methodName + "\", " + priority + ", Order." + order +");\n");
                             } else {
                                 messager.printMessage(Diagnostic.Kind.ERROR, "ERROR1");
                             }
@@ -107,7 +107,7 @@ public class AnnotationProcessor extends AbstractProcessor {
                             Criterion annotation = element.getAnnotation(Criterion.class);
                             Order order = annotation.order();
                             int priority = annotation.priority();
-                            writer.write("        putCriterionForField(" + className + ".class, \"" + fieldName + "\", " + priority + ", Order." + order +");\n");
+                            //writer.write("        putCriterionForField(" + className + ".class, \"" + fieldName + "\", " + priority + ", Order." + order +");\n");
                         } else {
                             messager.printMessage(Diagnostic.Kind.ERROR, "ERROR4");
                         }

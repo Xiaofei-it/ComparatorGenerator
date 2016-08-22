@@ -10,9 +10,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="72eb8398-2d80-4dd5-897d-1454f1c7c1d1" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/xiaofei/library/comparatorgeneratortest/Test05.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/comparator-generator/src/main/java/xiaofei/library/comparatorgenerator/internal/AnnotationUtilsOrigin.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/comparator-generator/src/main/java/xiaofei/library/comparatorgenerator/internal/CriterionManager.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/test/java/xiaofei/library/comparatorgeneratortest/ExampleUnitTest.java" afterPath="$PROJECT_DIR$/app/src/test/java/xiaofei/library/comparatorgeneratortest/ExampleUnitTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/test/java/xiaofei/library/comparatorgeneratortest/TestA.java" afterPath="$PROJECT_DIR$/app/src/test/java/xiaofei/library/comparatorgeneratortest/TestA.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/annotation-processor/src/main/java/xiaofei/library/comparatorgenerator/annotationprocessor/AnnotationProcessor.java" afterPath="$PROJECT_DIR$/annotation-processor/src/main/java/xiaofei/library/comparatorgenerator/annotationprocessor/AnnotationProcessor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/xiaofei/library/comparatorgeneratortest/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/xiaofei/library/comparatorgeneratortest/MainActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/comparator-generator/src/main/java/xiaofei/library/comparatorgenerator/ComparatorGenerator.java" afterPath="$PROJECT_DIR$/comparator-generator/src/main/java/xiaofei/library/comparatorgenerator/ComparatorGenerator.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/comparator-generator/src/main/java/xiaofei/library/comparatorgenerator/internal/AnnotationUtils.java" afterPath="$PROJECT_DIR$/comparator-generator/src/main/java/xiaofei/library/comparatorgenerator/internal/AnnotationUtils.java" />
     </list>
     <ignored path="ComparatorGenerator.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -40,63 +45,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ComparatorGenerator.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/comparator-generator/src/main/java/xiaofei/library/comparatorgenerator/ComparatorGenerator.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="53" column="25" selection-start-line="53" selection-start-column="25" selection-end-line="53" selection-end-column="25" />
-              <folding>
-                <element signature="e#0#593#0" expanded="true" />
-                <element signature="e#1633#1845#0" expanded="true" />
-                <element signature="e#1844#1845#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ExampleUnitTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/test/java/xiaofei/library/comparatorgeneratortest/ExampleUnitTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="21" column="16" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TestA.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/test/java/xiaofei/library/comparatorgeneratortest/TestA.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="28" column="12" selection-start-line="28" selection-start-column="12" selection-end-line="28" selection-end-column="12" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AnnotationUtils.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/comparator-generator/src/main/java/xiaofei/library/comparatorgenerator/internal/AnnotationUtils.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="50" column="44" selection-start-line="50" selection-start-column="44" selection-end-line="50" selection-end-column="44" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CriterionManager.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/build/intermediates/classes/debug/xiaofei/library/comparatorgenerator/CriterionManager.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="15" column="5" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#554#610#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="GeneratedComparator.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/comparator-generator/src/main/java/xiaofei/library/comparatorgenerator/internal/GeneratedComparator.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -110,21 +58,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CriterionManager.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/comparator-generator/src/main/java/xiaofei/library/comparatorgenerator/internal/CriterionManager.java">
+      <file leaf-file-name="AnnotationUtils.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/comparator-generator/src/main/java/xiaofei/library/comparatorgenerator/internal/AnnotationUtils.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Test01.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/xiaofei/library/comparatorgeneratortest/Test01.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="19" column="4" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="4" />
+              <caret line="64" column="80" selection-start-line="64" selection-start-column="80" selection-end-line="64" selection-end-column="80" />
               <folding />
             </state>
           </provider>
@@ -140,16 +78,80 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AnnotationProcessor.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Test05.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/xiaofei/library/comparatorgeneratortest/Test05.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.7978437">
+              <caret line="35" column="30" selection-start-line="35" selection-start-column="30" selection-end-line="35" selection-end-column="30" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#472#473#0" expanded="true" />
+                <element signature="e#496#497#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Test04.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/xiaofei/library/comparatorgeneratortest/Test04.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="75" column="0" selection-start-line="61" selection-start-column="8" selection-end-line="75" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AnnotationProcessor.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/annotation-processor/src/main/java/xiaofei/library/comparatorgenerator/annotationprocessor/AnnotationProcessor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.3315364">
-              <caret line="109" column="30" selection-start-line="109" selection-start-column="30" selection-end-line="109" selection-end-column="30" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="93" column="133" selection-start-line="93" selection-start-column="133" selection-end-line="93" selection-end-column="133" />
               <folding>
                 <element signature="e#0#593#0" expanded="true" />
                 <element signature="imports" expanded="true" />
-                <element signature="e#1681#1689#0" expanded="true" />
+                <element signature="e#1799#1807#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CriterionManager.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/build/intermediates/classes/debug/xiaofei/library/comparatorgenerator/CriterionManager.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="6" column="32" selection-start-line="6" selection-start-column="32" selection-end-line="6" selection-end-column="32" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/xiaofei/library/comparatorgeneratortest/MainActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="10" column="22" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Test02.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/xiaofei/library/comparatorgeneratortest/Test02.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="40" column="24" selection-start-line="40" selection-start-column="24" selection-end-line="40" selection-end-column="24" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AnnotationProcessorOrigin.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/annotation-processor/src/main/java/xiaofei/library/comparatorgenerator/annotationprocessor/AnnotationProcessorOrigin.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="107" column="20" selection-start-line="107" selection-start-column="20" selection-end-line="107" selection-end-column="20" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -2416,7 +2418,6 @@
         <option value="$PROJECT_DIR$/comparator-generator/src/main/java/xiaofei/library/comparatorgenerator/internal/GeneratedComparator.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/xiaofei/library/comparatorgeneratortest/Test02.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/xiaofei/library/comparatorgeneratortest/Test03.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/xiaofei/library/comparatorgeneratortest/MainActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/xiaofei/library/comparatorgeneratortest/Test04.java" />
         <option value="$PROJECT_DIR$/comparator-generator/src/main/java/xiaofei/library/comparatorgenerator/internal/TypeUtils.java" />
         <option value="$PROJECT_DIR$/README.md" />
@@ -2426,18 +2427,20 @@
         <option value="$PROJECT_DIR$/app/build.gradle" />
         <option value="$PROJECT_DIR$/comparator-generator/build.gradle" />
         <option value="$PROJECT_DIR$/comparator-generator/src/main/java/xiaofei/library/comparatorgenerator/internal/MethodMember.java" />
-        <option value="$PROJECT_DIR$/comparator-generator/src/main/java/xiaofei/library/comparatorgenerator/internal/AnnotationUtilsOrigin.java" />
         <option value="$PROJECT_DIR$/comparator-generator/src/main/java/xiaofei/library/comparatorgenerator/internal/CriterionManager.java" />
-        <option value="$PROJECT_DIR$/comparator-generator/src/main/java/xiaofei/library/comparatorgenerator/internal/AnnotationUtils.java" />
-        <option value="$PROJECT_DIR$/comparator-generator/src/main/java/xiaofei/library/comparatorgenerator/ComparatorGenerator.java" />
         <option value="$PROJECT_DIR$/annotation-processor/src/main/java/xiaofei/library/comparatorgenerator/annotationprocessor/AnnotationProcessorOrigin.java" />
         <option value="$PROJECT_DIR$/annotation-processor/src/main/java/xiaofei/library/comparatorgenerator/annotationprocessor/Example.java" />
         <option value="$PROJECT_DIR$/comparator-generator/src/main/java/xiaofei/library/comparatorgenerator/internal/FieldMember.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/xiaofei/library/comparatorgeneratortest/Test01.java" />
-        <option value="$PROJECT_DIR$/app/build/intermediates/classes/debug/xiaofei/library/comparatorgenerator/CriterionManager.java" />
-        <option value="$PROJECT_DIR$/annotation-processor/src/main/java/xiaofei/library/comparatorgenerator/annotationprocessor/AnnotationProcessor.java" />
         <option value="$PROJECT_DIR$/app/src/test/java/xiaofei/library/comparatorgeneratortest/ExampleUnitTest.java" />
         <option value="$PROJECT_DIR$/app/src/test/java/xiaofei/library/comparatorgeneratortest/TestA.java" />
+        <option value="$PROJECT_DIR$/comparator-generator/src/main/java/xiaofei/library/comparatorgenerator/internal/AnnotationUtilsOrigin.java" />
+        <option value="$PROJECT_DIR$/comparator-generator/src/main/java/xiaofei/library/comparatorgenerator/internal/AnnotationUtils.java" />
+        <option value="$PROJECT_DIR$/annotation-processor/src/main/java/xiaofei/library/comparatorgenerator/annotationprocessor/AnnotationProcessor.java" />
+        <option value="$PROJECT_DIR$/comparator-generator/src/main/java/xiaofei/library/comparatorgenerator/ComparatorGenerator.java" />
+        <option value="$PROJECT_DIR$/app/build/intermediates/classes/debug/xiaofei/library/comparatorgenerator/CriterionManager.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/xiaofei/library/comparatorgeneratortest/MainActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/xiaofei/library/comparatorgeneratortest/Test05.java" />
       </list>
     </option>
   </component>
@@ -2698,6 +2701,74 @@
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="comparatorgeneratortest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Test04.java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ComparatorGenerator" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ComparatorGenerator" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="comparatorgeneratortest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Test02.java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ComparatorGenerator" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ComparatorGenerator" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -2736,32 +2807,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="intermediates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ComparatorGenerator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ComparatorGenerator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="build" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="intermediates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="classes" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -3032,7 +3077,7 @@
     <property name="android.sdk.path" value="$USER_HOME$/Downloads/android-sdk-macosx" />
     <property name="android.project.structure.last.selected" value="SDK Location" />
     <property name="android.project.structure.proportion" value="0.15" />
-    <property name="device.picker.selection" value="X8QDU15630001447" />
+    <property name="device.picker.selection" value="NX508J" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/comparator-generator/src/main/java/xiaofei/library/comparatorgenerator/internal" />
   </component>
   <component name="RecentsManager">
@@ -3049,7 +3094,7 @@
       <recent name="$PROJECT_DIR$/app/src/main/java/xiaofei/library/comparatorgeneratortest" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ExampleUnitTest.f">
+  <component name="RunManager" selected="Android Application.app">
     <configuration default="false" name="ExampleUnitTest.f" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -3562,27 +3607,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/xiaofei/library/comparatorgeneratortest/Test04.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.60966545">
-          <caret line="87" column="0" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/xiaofei/library/comparatorgeneratortest/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.39033458">
-          <caret line="14" column="14" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/xiaofei/library/comparatorgeneratortest/Test02.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.1152416">
-          <caret line="40" column="24" selection-start-line="40" selection-start-column="24" selection-end-line="40" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README-ZH-CN.md">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.10638298">
@@ -3683,14 +3707,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_45.jdk/Contents/Home/src.zip!/javax/lang/model/element/TypeElement.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.0116279">
-          <caret line="111" column="9" selection-start-line="111" selection-start-column="9" selection-end-line="111" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/comparator-generator/src/main/java/xiaofei/library/comparatorgenerator/internal/SortingCriterion.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-8.333333">
@@ -3723,14 +3739,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/comparator-generator/src/main/java/xiaofei/library/comparatorgenerator/internal/AnnotationUtilsOrigin.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_45.jdk/Contents/Home/src.zip!/java/lang/reflect/Method.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-25.666666">
@@ -3743,14 +3751,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.21003717">
           <caret line="61" column="9" selection-start-line="61" selection-start-column="9" selection-end-line="61" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/annotation-processor/src/main/java/xiaofei/library/comparatorgenerator/annotationprocessor/AnnotationProcessorOrigin.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.04360465">
-          <caret line="40" column="13" selection-start-line="40" selection-start-column="13" selection-end-line="40" selection-end-column="13" />
           <folding />
         </state>
       </provider>
@@ -3779,68 +3779,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/comparator-generator/src/main/java/xiaofei/library/comparatorgenerator/ComparatorGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="53" column="25" selection-start-line="53" selection-start-column="25" selection-end-line="53" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#593#0" expanded="true" />
-            <element signature="e#1633#1845#0" expanded="true" />
-            <element signature="e#1844#1845#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/comparator-generator/src/main/java/xiaofei/library/comparatorgenerator/internal/AnnotationUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="50" column="44" selection-start-line="50" selection-start-column="44" selection-end-line="50" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/build/intermediates/classes/debug/xiaofei/library/comparatorgenerator/CriterionManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="15" column="5" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#554#610#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/comparator-generator/src/main/java/xiaofei/library/comparatorgenerator/internal/GeneratedComparator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="32" column="41" selection-start-line="32" selection-start-column="41" selection-end-line="32" selection-end-column="41" />
-          <folding>
-            <element signature="e#970#971#0" expanded="true" />
-            <element signature="e#1010#1011#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/comparator-generator/src/main/java/xiaofei/library/comparatorgenerator/internal/CriterionManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/xiaofei/library/comparatorgeneratortest/Test01.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="19" column="4" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/xiaofei/library/comparatorgeneratortest/Test03.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="16" column="17" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
           <folding />
         </state>
       </provider>
@@ -3861,14 +3803,111 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/comparator-generator/src/main/java/xiaofei/library/comparatorgenerator/internal/AnnotationUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="64" column="80" selection-start-line="64" selection-start-column="80" selection-end-line="64" selection-end-column="80" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/comparator-generator/src/main/java/xiaofei/library/comparatorgenerator/internal/GeneratedComparator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="32" column="41" selection-start-line="32" selection-start-column="41" selection-end-line="32" selection-end-column="41" />
+          <folding>
+            <element signature="e#970#971#0" expanded="true" />
+            <element signature="e#1010#1011#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/annotation-processor/src/main/java/xiaofei/library/comparatorgenerator/annotationprocessor/AnnotationProcessorOrigin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="107" column="20" selection-start-line="107" selection-start-column="20" selection-end-line="107" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_45.jdk/Contents/Home/src.zip!/javax/lang/model/element/TypeElement.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33274338">
+          <caret line="90" column="16" selection-start-line="90" selection-start-column="16" selection-end-line="90" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/comparator-generator/src/main/java/xiaofei/library/comparatorgenerator/ComparatorGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.21769911">
+          <caret line="53" column="86" selection-start-line="53" selection-start-column="86" selection-end-line="53" selection-end-column="86" />
+          <folding>
+            <element signature="e#0#593#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/xiaofei/library/comparatorgeneratortest/Test02.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="40" column="24" selection-start-line="40" selection-start-column="24" selection-end-line="40" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/xiaofei/library/comparatorgeneratortest/Test03.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="16" column="17" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/annotation-processor/src/main/java/xiaofei/library/comparatorgenerator/annotationprocessor/AnnotationProcessor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.3315364">
-          <caret line="109" column="30" selection-start-line="109" selection-start-column="30" selection-end-line="109" selection-end-column="30" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="93" column="133" selection-start-line="93" selection-start-column="133" selection-end-line="93" selection-end-column="133" />
           <folding>
             <element signature="e#0#593#0" expanded="true" />
             <element signature="imports" expanded="true" />
-            <element signature="e#1681#1689#0" expanded="true" />
+            <element signature="e#1799#1807#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/build/intermediates/classes/debug/xiaofei/library/comparatorgenerator/CriterionManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="6" column="32" selection-start-line="6" selection-start-column="32" selection-end-line="6" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/xiaofei/library/comparatorgeneratortest/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="22" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/xiaofei/library/comparatorgeneratortest/Test04.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="75" column="0" selection-start-line="61" selection-start-column="8" selection-end-line="75" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/xiaofei/library/comparatorgeneratortest/Test05.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7978437">
+          <caret line="35" column="30" selection-start-line="35" selection-start-column="30" selection-end-line="35" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#472#473#0" expanded="true" />
+            <element signature="e#496#497#0" expanded="true" />
           </folding>
         </state>
       </provider>

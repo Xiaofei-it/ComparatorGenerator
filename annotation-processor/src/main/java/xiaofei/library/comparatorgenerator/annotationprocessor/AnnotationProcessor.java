@@ -20,6 +20,7 @@ package xiaofei.library.comparatorgenerator.annotationprocessor;
 
 import java.io.IOException;
 import java.io.Writer;
+import java.lang.reflect.Type;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -31,6 +32,8 @@ import javax.annotation.processing.RoundEnvironment;
 import javax.lang.model.SourceVersion;
 import javax.lang.model.element.Element;
 import javax.lang.model.element.ExecutableElement;
+import javax.lang.model.element.Modifier;
+import javax.lang.model.element.NestingKind;
 import javax.lang.model.element.TypeElement;
 import javax.lang.model.element.VariableElement;
 import javax.tools.Diagnostic;
@@ -87,12 +90,15 @@ public class AnnotationProcessor extends AbstractProcessor {
                         if (element instanceof ExecutableElement) {
                             ExecutableElement executableElement = (ExecutableElement) element;
                             if (executableElement.getParameters().size() == 0) {
-                                String className = ((TypeElement) element.getEnclosingElement()).getQualifiedName().toString();
-                                String methodName = element.getSimpleName().toString();
-                                Criterion annotation = element.getAnnotation(Criterion.class);
-                                Order order = annotation.order();
-                                int priority = annotation.priority();
-                                //writer.write("        putCriterionForMethod(" + className + ".class, \"" + methodName + "\", " + priority + ", Order." + order +");\n");
+                                TypeElement clazz = (TypeElement) element.getEnclosingElement();
+                                if (clazz.getNestingKind() == NestingKind.TOP_LEVEL && clazz.getModifiers().contains(Modifier.PUBLIC)) {
+                                    String className = clazz.getQualifiedName().toString();
+                                    String methodName = element.getSimpleName().toString();
+                                    Criterion annotation = element.getAnnotation(Criterion.class);
+                                    Order order = annotation.order();
+                                    int priority = annotation.priority();
+                                    writer.write("        putCriterionForMethod(" + className + ".class, \"" + methodName + "\", " + priority + ", Order." + order + ");\n");
+                                }
                             } else {
                                 messager.printMessage(Diagnostic.Kind.ERROR, "ERROR1");
                             }
@@ -102,12 +108,15 @@ public class AnnotationProcessor extends AbstractProcessor {
                         break;
                     case FIELD:
                         if (element instanceof VariableElement) {
-                            String className = ((TypeElement) element.getEnclosingElement()).getQualifiedName().toString();
-                            String fieldName = element.getSimpleName().toString();
-                            Criterion annotation = element.getAnnotation(Criterion.class);
-                            Order order = annotation.order();
-                            int priority = annotation.priority();
-                            //writer.write("        putCriterionForField(" + className + ".class, \"" + fieldName + "\", " + priority + ", Order." + order +");\n");
+                            TypeElement clazz = (TypeElement) element.getEnclosingElement();
+                            if (clazz.getNestingKind() == NestingKind.TOP_LEVEL && clazz.getModifiers().contains(Modifier.PUBLIC)) {
+                                String className = clazz.getQualifiedName().toString();
+                                String fieldName = element.getSimpleName().toString();
+                                Criterion annotation = element.getAnnotation(Criterion.class);
+                                Order order = annotation.order();
+                                int priority = annotation.priority();
+                                writer.write("        putCriterionForField(" + className + ".class, \"" + fieldName + "\", " + priority + ", Order." + order + ");\n");
+                            }
                         } else {
                             messager.printMessage(Diagnostic.Kind.ERROR, "ERROR4");
                         }
@@ -142,11 +151,13 @@ public class AnnotationProcessor extends AbstractProcessor {
     private void writeFileEnd(Writer writer) throws IOException {
         writer.write("    }\n\n");
         writer.write("    private static void putCriterionForMethod(Class<?> clazz, String methodName, int priority, Order order) {\n");
-        writer.write("        ConcurrentHashMap<Integer, SortingCriterion> map = maps.putIfAbsent(clazz, new ConcurrentHashMap<Integer, SortingCriterion>());\n");
+        writer.write("        maps.putIfAbsent(clazz, new ConcurrentHashMap<Integer, SortingCriterion>());\n");
+        writer.write("        ConcurrentHashMap<Integer, SortingCriterion> map = maps.get(clazz);\n");
         writer.write("        map.put(priority, new SortingCriterion(new MethodMember(clazz, methodName), order));\n");
         writer.write("    }\n\n");
         writer.write("    private static void putCriterionForField(Class<?> clazz, String fieldName, int priority, Order order) {\n");
-        writer.write("        ConcurrentHashMap<Integer, SortingCriterion> map = maps.putIfAbsent(clazz, new ConcurrentHashMap<Integer, SortingCriterion>());\n");
+        writer.write("        maps.putIfAbsent(clazz, new ConcurrentHashMap<Integer, SortingCriterion>());\n");
+        writer.write("        ConcurrentHashMap<Integer, SortingCriterion> map = maps.get(clazz);\n");
         writer.write("        map.put(priority, new SortingCriterion(new FieldMember(clazz, fieldName), order));\n");
         writer.write("    }\n\n");
         writer.write("    public static ConcurrentHashMap<Integer, SortingCriterion> getCriteriaIn(Class<?> clazz) {\n");
@@ -157,4 +168,4 @@ public class AnnotationProcessor extends AbstractProcessor {
 }
 
 //TODO what if the element is within a element???
-//TODO what if the before???
+//TODO 如果传入一个不能访问的类，但这里还是可以访问的。

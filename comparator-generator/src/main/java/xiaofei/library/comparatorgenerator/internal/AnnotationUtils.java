@@ -45,14 +45,54 @@ public class AnnotationUtils {
 
     private AnnotationUtils() {}
 
-    public static ConcurrentHashMap<Integer, SortingCriterion> getCriteriaIn(Class<?> clazz) {
+    public static ConcurrentHashMap<Integer, SortingCriterion> getCriteria(Class<?> clazz) {
         try {
-            return (ConcurrentHashMap<Integer, SortingCriterion>) method.invoke(null, clazz);
+            ConcurrentHashMap<Integer, SortingCriterion> map = (ConcurrentHashMap<Integer, SortingCriterion>) method.invoke(null, clazz);
+            if (map == null) {
+                return getCriteriaInternal(clazz);
+            } else {
+                return map;
+            }
         } catch (IllegalAccessException e) {
             e.printStackTrace();
         } catch (InvocationTargetException e) {
             e.printStackTrace();
         }
         return null;
+    }
+
+    private static ConcurrentHashMap<Integer, SortingCriterion> getCriteriaInternal(Class<?> clazz) {
+        ConcurrentHashMap<Integer, SortingCriterion> map = new ConcurrentHashMap<Integer, SortingCriterion>();
+        List<Field> fields = TypeUtils.getFields(clazz);
+        for (Field field : fields) {
+            Criterion criterion = field.getAnnotation(Criterion.class);
+            if (criterion != null) {
+                TypeUtils.checkField(field);
+                int priority = criterion.priority();
+                Order order = criterion.order();
+                SortingCriterion prev = map.put(priority, new SortingCriterion(new FieldMember(field), order));
+                if (prev != null) {
+                    throw new RuntimeException(
+                            "The priority value " + priority + " has already been set to the member "
+                                    + prev.getMember().getName() + ". Please specify another priority value.");
+                }
+            }
+        }
+        List<Method> methods = TypeUtils.getNoArgMethods(clazz);
+        for (Method method : methods) {
+            Criterion criterion = method.getAnnotation(Criterion.class);
+            if (criterion != null) {
+                TypeUtils.checkMethod(method);
+                int priority = criterion.priority();
+                Order order = criterion.order();
+                SortingCriterion prev = map.put(priority, new SortingCriterion(new MethodMember(method), order));
+                if (prev != null) {
+                    throw new RuntimeException(
+                            "The priority value " + priority + " has already been set to the member "
+                                    + prev.getMember().getName() + ". Please specify another priority value.");
+                }
+            }
+        }
+        return map;
     }
 }

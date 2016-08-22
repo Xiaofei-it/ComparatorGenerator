@@ -13,5 +13,6 @@ public class MainActivity extends AppCompatActivity {
         Test02.main(null);
         Test03.main(null);
         Test04.main(null);
+        Test05.main(null);
     }
 }

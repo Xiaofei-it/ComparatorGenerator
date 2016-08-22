@@ -51,7 +51,7 @@ public class ComparatorGenerator<T> {
                         return -o1.compareTo(o2);
                     }
                 });
-        ConcurrentHashMap<Integer, SortingCriterion> map = AnnotationUtils.getCriteriaIn(clazz);
+        ConcurrentHashMap<Integer, SortingCriterion> map = AnnotationUtils.getCriteria(clazz);
         for (Map.Entry<Integer, SortingCriterion> entry : map.entrySet()) {
             SortingCriterion prev = criteria.put(entry.getKey(), entry.getValue());
             if (prev != null) {

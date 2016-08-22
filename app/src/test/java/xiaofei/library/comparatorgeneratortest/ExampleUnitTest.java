@@ -15,8 +15,10 @@ public class ExampleUnitTest {
         Class<?> clazz = Class.forName("xiaofei.library.comparatorgeneratortest.TestA$A");
         Field field = clazz.getDeclaredField("i");
         TestA testA = new TestA();
-        System.out.print(field.get(testA.a));
+        System.out.println(field.get(testA.a));
         field.set(testA.a, 34);
-        System.out.print(field.get(testA.a));
+        System.out.println(field.get(testA.a));
+        testA.f();
+        testA.f2();
     }
 }

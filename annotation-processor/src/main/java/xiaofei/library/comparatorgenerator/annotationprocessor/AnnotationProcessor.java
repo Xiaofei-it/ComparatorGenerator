@@ -155,3 +155,6 @@ public class AnnotationProcessor extends AbstractProcessor {
         writer.write("}\n");
     }
 }
+
+//TODO what if the element is within a element???
+//TODO what if the before???

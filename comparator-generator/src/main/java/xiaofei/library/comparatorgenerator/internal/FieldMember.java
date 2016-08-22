@@ -28,6 +28,7 @@ public class FieldMember implements Member {
     private Field field;
 
     public FieldMember(Field field) {
+        TypeUtils.checkField(field);
         if (!field.isAccessible()) {
             field.setAccessible(true);
         }
@@ -35,7 +36,7 @@ public class FieldMember implements Member {
     }
 
     public FieldMember(Class<?> clazz, String fieldName) {
-        this(TypeUtils.getField(clazz, fieldName));
+        this(TypeUtils.getFieldIncludingSuperClass(clazz, fieldName));
     }
 
     @Override

@@ -21,6 +21,7 @@ package xiaofei.library.comparatorgeneratortest;
 import org.junit.Test;
 
 import java.lang.reflect.Field;
+import java.lang.reflect.Method;
 
 import static org.junit.Assert.*;
 
@@ -28,6 +29,22 @@ import static org.junit.Assert.*;
  * Created by Xiaofei on 16/8/22.
  */
 public class ExampleUnitTest {
+    @Test
+    public void g() {
+        class A {
+            int j;
+        }
+        try {
+            Field field = A.class.getDeclaredField("i");
+        } catch (NoSuchFieldException e) {
+            e.printStackTrace();
+        }
+        try {
+            Method method = A.class.getDeclaredMethod("j");
+        } catch (NoSuchMethodException e) {
+            e.printStackTrace();
+        }
+    }
     @Test
     public void f() throws Exception {
         Class<?> clazz = Class.forName("xiaofei.library.comparatorgeneratortest.TestA$A");

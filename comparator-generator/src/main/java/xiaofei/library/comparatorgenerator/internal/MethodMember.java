@@ -29,6 +29,7 @@ public class MethodMember implements Member {
     private Method method;
 
     public MethodMember(Method method) {
+        TypeUtils.checkMethod(method);
         if (!method.isAccessible()) {
             method.setAccessible(true);
         }
@@ -36,7 +37,7 @@ public class MethodMember implements Member {
     }
 
     public MethodMember(Class<?> clazz, String methodName) {
-        this(TypeUtils.getMethod(clazz, methodName));
+        this(TypeUtils.getMethodIncludingSuperClass(clazz, methodName));
     }
 
     @Override

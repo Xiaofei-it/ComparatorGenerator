@@ -27,7 +27,7 @@ public class TypeUtils {
 
     private TypeUtils() {}
 
-    public static List<Field> getFields(Class<?> clazz) {
+    public static List<Field> getFieldsIncludingSuperClass(Class<?> clazz) {
         List<Field> result = new ArrayList<Field>();
         for (Class<?> tmp = clazz; tmp != null && tmp != Object.class; tmp = tmp.getSuperclass()) {
             Field[] fields = tmp.getDeclaredFields();
@@ -40,16 +40,13 @@ public class TypeUtils {
         return result;
     }
 
-    public static Field getField(Class<?> clazz, String fieldName) {
-        try {
-            for (Class<?> tmp = clazz; tmp != null && tmp != Object.class; tmp = tmp.getSuperclass()) {
-                Field field = clazz.getDeclaredField(fieldName);
-                if (field != null) {
-                    return field;
-                }
-            }
-        } catch (NoSuchFieldException e) {
+    public static Field getFieldIncludingSuperClass(Class<?> clazz, String fieldName) {
+        for (Class<?> tmp = clazz; tmp != null && tmp != Object.class; tmp = tmp.getSuperclass()) {
+            try {
+                return clazz.getDeclaredField(fieldName);
+            } catch (NoSuchFieldException e) {
 
+            }
         }
         return null;
     }
@@ -61,27 +58,22 @@ public class TypeUtils {
 
     public static List<Method> getNoArgMethods(Class<?> clazz) {
         List<Method> result = new ArrayList<Method>();
-        for (Class<?> tmp = clazz; tmp != null && tmp != Object.class; tmp = tmp.getSuperclass()) {
-            Method[] methods = tmp.getDeclaredMethods();
-            for (Method method : methods) {
-                if (!method.isSynthetic() && isNoArgMethod(method)) {
-                    result.add(method);
-                }
+        Method[] methods = clazz.getDeclaredMethods();
+        for (Method method : methods) {
+            if (!method.isSynthetic() && isNoArgMethod(method)) {
+                result.add(method);
             }
         }
         return result;
     }
 
-    public static Method getMethod(Class<?> clazz, String methodName) {
-        try {
-            for (Class<?> tmp = clazz; tmp != null && tmp != Object.class; tmp = tmp.getSuperclass()) {
-                Method method = clazz.getDeclaredMethod(methodName);
-                if (method != null) {
-                    return method;
-                }
-            }
-        } catch (NoSuchMethodException e) {
+    public static Method getMethodIncludingSuperClass(Class<?> clazz, String methodName) {
+        for (Class<?> tmp = clazz; tmp != null && tmp != Object.class; tmp = tmp.getSuperclass()) {
+            try {
+                return clazz.getDeclaredMethod(methodName);
+            } catch (NoSuchMethodException e) {
 
+            }
         }
         return null;
     }

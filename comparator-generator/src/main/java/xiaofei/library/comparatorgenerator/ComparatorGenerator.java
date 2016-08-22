@@ -50,7 +50,7 @@ public class ComparatorGenerator<T> {
                         return -o1.compareTo(o2);
                     }
                 });
-        TreeMap<Integer, SortingCriterion> map = AnnotationUtils.getCriteriaIn(clazz);
+        Map<Integer, SortingCriterion> map = AnnotationUtils.getCriteria(clazz);
         for (Map.Entry<Integer, SortingCriterion> entry : map.entrySet()) {
             SortingCriterion prev = criteria.put(entry.getKey(), entry.getValue());
             if (prev != null) {
@@ -66,8 +66,8 @@ public class ComparatorGenerator<T> {
     }
 
     public ComparatorGenerator<T> addCriterion(int priority, final String memberName, Order order) {
-        Field field = TypeUtils.getField(clazz, memberName);
-        Method method = TypeUtils.getMethod(clazz, memberName);
+        Field field = TypeUtils.getFieldIncludingSuperClass(clazz, memberName);
+        Method method = TypeUtils.getMethodIncludingSuperClass(clazz, memberName);
         if (field ==null && method == null) {
             throw new IllegalArgumentException("Member " + memberName + " does not exist.");
         }
@@ -77,10 +77,8 @@ public class ComparatorGenerator<T> {
         }
         Member member;
         if (field != null) {
-            TypeUtils.checkField(field);
             member = new FieldMember(field);
         } else {
-            TypeUtils.checkMethod(method);
             member = new MethodMember(method);
         }
         SortingCriterion prev = criteria.put(priority, new SortingCriterion(member, order));

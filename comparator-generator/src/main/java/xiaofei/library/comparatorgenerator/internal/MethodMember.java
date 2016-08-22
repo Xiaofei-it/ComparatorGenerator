@@ -29,10 +29,15 @@ public class MethodMember implements Member {
     private Method method;
 
     public MethodMember(Method method) {
+        TypeUtils.checkMethod(method);
         if (!method.isAccessible()) {
             method.setAccessible(true);
         }
         this.method = method;
+    }
+
+    public MethodMember(Class<?> clazz, String methodName) {
+        this(TypeUtils.getMethodIncludingSuperClass(clazz, methodName));
     }
 
     @Override

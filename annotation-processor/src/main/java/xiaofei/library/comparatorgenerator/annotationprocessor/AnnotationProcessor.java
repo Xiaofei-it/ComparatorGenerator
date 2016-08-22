@@ -20,7 +20,6 @@ package xiaofei.library.comparatorgenerator.annotationprocessor;
 
 import java.io.IOException;
 import java.io.Writer;
-import java.lang.reflect.Type;
 import java.util.HashSet;
 import java.util.Set;
 

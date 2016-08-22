@@ -20,7 +20,6 @@ package xiaofei.library.comparatorgenerator.internal;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
-import java.lang.reflect.Type;
 
 /**
  * Created by Xiaofei on 16/5/11.

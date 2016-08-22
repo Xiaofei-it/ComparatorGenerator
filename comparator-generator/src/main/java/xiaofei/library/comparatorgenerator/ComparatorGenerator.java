@@ -25,7 +25,6 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
-import java.util.concurrent.ConcurrentHashMap;
 
 import xiaofei.library.comparatorgenerator.internal.AnnotationUtils;
 import xiaofei.library.comparatorgenerator.internal.FieldMember;
@@ -51,7 +50,7 @@ public class ComparatorGenerator<T> {
                         return -o1.compareTo(o2);
                     }
                 });
-        ConcurrentHashMap<Integer, SortingCriterion> map = AnnotationUtils.getCriteria(clazz);
+        Map<Integer, SortingCriterion> map = AnnotationUtils.getCriteria(clazz);
         for (Map.Entry<Integer, SortingCriterion> entry : map.entrySet()) {
             SortingCriterion prev = criteria.put(entry.getKey(), entry.getValue());
             if (prev != null) {

@@ -28,7 +28,7 @@ import xiaofei.library.comparatorgenerator.Order;
 /**
  * Created by Xiaofei on 16/8/22.
  */
-public class Test05 {
+public class Test05 extends Test05Super {
     @Criterion(order = Order.ASCENDING, priority = 4)
     int j;
     String s;
@@ -38,22 +38,27 @@ public class Test05 {
     }
     public static void main(String[] args) {
         System.out.println("Test05");
-        Test05 a = new Test05();
-        a.j = 3; a.s = "A";
-        a.j = 2; a.s = "B";
-        a.j = 2; a.s = "F";
-        Test05[] test05s = new Test05[3];
-        for (int i = 0; i < 3; i++) {
+        Test05[] test05s = new Test05[4];
+        for (int i = 0; i < 4; i++) {
             test05s[i] = new Test05();
         }
         test05s[0].j = 3; test05s[0].s = "A";
         test05s[1].j = 2; test05s[1].s = "B";
-        test05s[2].j = 2; test05s[2].s = "F";
+        test05s[2].j = 2; test05s[2].s = "F"; test05s[2].setK(10);
+        test05s[3].j = 2; test05s[3].s = "F"; test05s[3].setK(4);
         Comparator<Test05> comparator = new ComparatorGenerator<Test05>(Test05.class).generate();
         Arrays.sort(test05s, comparator);
-        for (int i = 0 ; i < 3; ++i) {
-            System.out.println("" + test05s[i].j + " " + test05s[i].s);
+        for (int i = 0 ; i < 4; ++i) {
+            System.out.println("" + test05s[i].j + " " + test05s[i].s + " " + test05s[i].getK());
         }
 
+    }
+
+    public void setK(int k) {
+        super.k = k;
+    }
+
+    public int getK() {
+        return super.k;
     }
 }

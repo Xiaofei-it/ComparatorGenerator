@@ -35,7 +35,7 @@ public class AnnotationUtils {
     static {
         try {
             Class<?> clazz = Class.forName("xiaofei.library.comparatorgenerator.CriterionManager");
-            method = clazz.getDeclaredMethod("getCriteriaIn", Class.class);
+            method = clazz.getDeclaredMethod("getCriteria", Class.class);
         } catch (ClassNotFoundException e) {
             e.printStackTrace();;
         } catch (NoSuchMethodException e) {
@@ -45,12 +45,12 @@ public class AnnotationUtils {
 
     private AnnotationUtils() {}
 
-    public static ConcurrentHashMap<Integer, SortingCriterion> getCriteria(Class<?> clazz) {
-        ConcurrentHashMap<Integer, SortingCriterion> result = new ConcurrentHashMap<Integer, SortingCriterion>();
+    public static Map<Integer, SortingCriterion> getCriteria(Class<?> clazz) {
+        Map<Integer, SortingCriterion> result = new ConcurrentHashMap<Integer, SortingCriterion>();
         for (Class<?> tmp = clazz; tmp != null && tmp != Object.class; tmp = tmp.getSuperclass()) {
-            ConcurrentHashMap<Integer, SortingCriterion> map = null;
+            Map<Integer, SortingCriterion> map = null;
             try {
-                map = (ConcurrentHashMap<Integer, SortingCriterion>) method.invoke(null, clazz);
+                map = (Map<Integer, SortingCriterion>) method.invoke(null, tmp);
             } catch (InvocationTargetException e) {
                 e.printStackTrace();
             } catch (IllegalAccessException e) {

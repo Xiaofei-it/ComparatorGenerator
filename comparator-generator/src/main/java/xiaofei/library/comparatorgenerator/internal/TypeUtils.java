@@ -27,19 +27,6 @@ public class TypeUtils {
 
     private TypeUtils() {}
 
-    public static List<Field> getFieldsIncludingSuperClass(Class<?> clazz) {
-        List<Field> result = new ArrayList<Field>();
-        for (Class<?> tmp = clazz; tmp != null && tmp != Object.class; tmp = tmp.getSuperclass()) {
-            Field[] fields = tmp.getDeclaredFields();
-            for (Field field : fields) {
-                if (!field.isSynthetic()) {
-                    result.add(field);
-                }
-            }
-        }
-        return result;
-    }
-
     public static Field getFieldIncludingSuperClass(Class<?> clazz, String fieldName) {
         for (Class<?> tmp = clazz; tmp != null && tmp != Object.class; tmp = tmp.getSuperclass()) {
             try {

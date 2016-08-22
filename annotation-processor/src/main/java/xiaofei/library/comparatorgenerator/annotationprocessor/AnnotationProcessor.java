@@ -159,12 +159,12 @@ public class AnnotationProcessor extends AbstractProcessor {
         writer.write("        ConcurrentHashMap<Integer, SortingCriterion> map = maps.get(clazz);\n");
         writer.write("        map.put(priority, new SortingCriterion(new FieldMember(clazz, fieldName), order));\n");
         writer.write("    }\n\n");
-        writer.write("    public static ConcurrentHashMap<Integer, SortingCriterion> getCriteriaIn(Class<?> clazz) {\n");
+        writer.write("    public static ConcurrentHashMap<Integer, SortingCriterion> getCriteria(Class<?> clazz) {\n");
         writer.write("        return maps.get(clazz);\n");
         writer.write("    }\n\n");
         writer.write("}\n");
     }
 }
 
-//TODO super class？？？另外混淆的问题
+//TODO 另外混淆的问题
 //TODO 如果传入一个不能访问的类，但这里还是可以访问的。

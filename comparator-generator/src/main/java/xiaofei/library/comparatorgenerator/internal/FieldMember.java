@@ -18,6 +18,8 @@
 
 package xiaofei.library.comparatorgenerator.internal;
 
+import com.sun.deploy.security.ValidationState;
+
 import java.lang.reflect.Field;
 
 /**
@@ -32,6 +34,10 @@ public class FieldMember implements Member {
             field.setAccessible(true);
         }
         this.field = field;
+    }
+
+    public FieldMember(Class<?> clazz, String fieldName) {
+        this(TypeUtils.getField(clazz, fieldName));
     }
 
     @Override

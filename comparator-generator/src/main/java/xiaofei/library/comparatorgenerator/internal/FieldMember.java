@@ -18,8 +18,6 @@
 
 package xiaofei.library.comparatorgenerator.internal;
 
-import com.sun.deploy.security.ValidationState;
-
 import java.lang.reflect.Field;
 
 /**

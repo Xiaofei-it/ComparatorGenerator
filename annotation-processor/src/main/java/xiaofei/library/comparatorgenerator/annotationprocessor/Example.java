@@ -49,7 +49,7 @@ public class Example {
         }
     }
 
-    private static ConcurrentHashMap<Class<?>, ConcurrentHashMap<Integer, SortingCriterion>> maps = new ConcurrentHashMap<>();
+    private static ConcurrentHashMap<Class<?>, ConcurrentHashMap<Integer, SortingCriterion>> maps = new ConcurrentHashMap<Class<?>, ConcurrentHashMap<Integer, SortingCriterion>>();
 
     static {
         putCriterionForField(A1.class, "", 1, Order.ASCENDING);

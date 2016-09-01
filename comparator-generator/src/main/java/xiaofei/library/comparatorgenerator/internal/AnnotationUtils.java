@@ -32,7 +32,7 @@ public class AnnotationUtils {
 
     private static final String TAG = "ComparatorGenerator: ";
 
-    private static final boolean DEBUG = true;
+    private static final boolean DEBUG = false;
 
     private static Method method = null;
 
@@ -70,7 +70,7 @@ public class AnnotationUtils {
                 }
                 Field[] fields = tmp.getDeclaredFields();
                 for (Field field : fields) {
-                    // The following statement may throw NoSuchFieldError if ProGuard is used.
+                    // The following statement may throw NoSuchFieldError if ProGuard obfuscates the library.
                     Criterion criterion = field.getAnnotation(Criterion.class);
                     if (criterion != null) {
                         int priority = criterion.priority();

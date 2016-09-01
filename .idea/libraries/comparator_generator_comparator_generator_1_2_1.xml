@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="comparator-generator.comparator-generator-1.2.1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/comparator-generator/build/libs/comparator-generator-1.2.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/comparator-generator/build/libs/comparator-generator-1.2.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<module external.linked.project.id=":comparator-generator" external.linked.project.path="$MODULE_DIR$" external.root.project.path="$MODULE_DIR$/.." external.system.id="GRADLE" external.system.module.group="xiaofei.library" external.system.module.version="1.2.1" type="JAVA_MODULE" version="4">
+<module external.linked.project.id=":comparator-generator-annotation-processor" external.linked.project.path="$MODULE_DIR$" external.root.project.path="$MODULE_DIR$/.." external.system.id="GRADLE" external.system.module.group="xiaofei.library" external.system.module.version="1.0.0" type="JAVA_MODULE" version="4">
   <component name="FacetManager">
     <facet type="android-gradle" name="Android-Gradle">
       <configuration>
-        <option name="GRADLE_PROJECT_PATH" value=":comparator-generator" />
+        <option name="GRADLE_PROJECT_PATH" value=":comparator-generator-annotation-processor" />
       </configuration>
     </facet>
     <facet type="java-gradle" name="Java-Gradle">
@@ -27,8 +27,9 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" exported="" name="comparator-generator.comparator-generator-1.2.1" level="project" />
-    <orderEntry type="library" exported="" name="comparator-generator.comparator-generator-1.2.1-javadoc" level="project" />
-    <orderEntry type="library" exported="" name="comparator-generator.comparator-generator-1.2.1-sources" level="project" />
+    <orderEntry type="module" module-name="comparator-generator" exported="" />
+    <orderEntry type="library" exported="" name="comparator-generator-annotation-processor.comparator-generator-annotation-processor-1.0.0" level="project" />
+    <orderEntry type="library" exported="" name="comparator-generator-annotation-processor.comparator-generator-annotation-processor-1.0.0-javadoc" level="project" />
+    <orderEntry type="library" exported="" name="comparator-generator-annotation-processor.comparator-generator-annotation-processor-1.0.0-sources" level="project" />
   </component>
 </module>

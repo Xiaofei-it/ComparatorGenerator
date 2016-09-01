@@ -3,9 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/ComparatorGenerator.iml" filepath="$PROJECT_DIR$/ComparatorGenerator.iml" />
-      <module fileurl="file://$PROJECT_DIR$/annotation-processor/annotation-processor.iml" filepath="$PROJECT_DIR$/annotation-processor/annotation-processor.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/comparator-generator/comparator-generator.iml" filepath="$PROJECT_DIR$/comparator-generator/comparator-generator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/comparator-generator-annotation-processor/annotation-processor.iml" filepath="$PROJECT_DIR$/comparator-generator-annotation-processor/annotation-processor.iml" />
     </modules>
   </component>
 </project>

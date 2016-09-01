@@ -2,18 +2,18 @@ apply plugin: 'java'
 
 ext {
     bintrayRepo = 'maven'
-    bintrayName = 'comparator-generator'
+    bintrayName = 'comparator-generator-annotation-processor'
 
     publishedGroupId = 'xiaofei.library'
-    libraryName = 'ComparatorGenerator'
-    artifact = 'comparator-generator'
+    libraryName = 'ComparatorGeneratorAnnotationProcessor'
+    artifact = 'comparator-generator-annotation-processor'
 
     libraryDescription = 'An easy-to-use helper class for generating a comparator for a specified class. Useful when sorting the instances of the specified class.'
 
     siteUrl = 'https://github.com/Xiaofei-it/ComparatorGenerator'
     gitUrl = 'https://github.com/Xiaofei-it/ComparatorGenerator.git'
 
-    libraryVersion = '1.2.1'
+    libraryVersion = '1.0.0'
 
     developerId = 'Xiaofei-it'
     developerName = 'Eric Zhao'
@@ -26,8 +26,9 @@ ext {
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    targetCompatibility = '1.7'
-    sourceCompatibility = '1.7'
+    compile project (':comparator-generator')
+    sourceCompatibility = 1.7
+    targetCompatibility = 1.7
 }
 
 apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'

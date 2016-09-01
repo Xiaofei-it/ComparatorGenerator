@@ -30,18 +30,25 @@ import xiaofei.library.comparatorgenerator.Order;
 
 public class AnnotationUtils {
 
-    private static Method method;
+    private static final String TAG = "ComparatorGenerator: ";
+
+    private static final boolean DEBUG = true;
 
     static {
         try {
             Class<?> clazz = Class.forName("xiaofei.library.comparatorgenerator.CriterionManager");
             method = clazz.getDeclaredMethod("getCriteria", Class.class);
+            if (DEBUG) {
+                System.out.println(TAG + "Find Class " + clazz.getName());
+            }
         } catch (ClassNotFoundException e) {
             e.printStackTrace();;
         } catch (NoSuchMethodException e) {
             e.printStackTrace();
         }
     }
+
+    private static Method method;
 
     private AnnotationUtils() {}
 
@@ -57,7 +64,10 @@ public class AnnotationUtils {
                 e.printStackTrace();
             }
             if (map == null) {
-                Field[] fields = clazz.getDeclaredFields();
+                if (DEBUG) {
+                    System.out.println(TAG + "Getting criteria for Class " + tmp.getName() + " from annotations.");
+                }
+                Field[] fields = tmp.getDeclaredFields();
                 for (Field field : fields) {
                     Criterion criterion = field.getAnnotation(Criterion.class);
                     if (criterion != null) {
@@ -71,7 +81,7 @@ public class AnnotationUtils {
                         }
                     }
                 }
-                List<Method> methods = TypeUtils.getNoArgMethods(clazz);
+                List<Method> methods = TypeUtils.getNoArgMethods(tmp);
                 for (Method method : methods) {
                     Criterion criterion = method.getAnnotation(Criterion.class);
                     if (criterion != null) {
@@ -86,6 +96,9 @@ public class AnnotationUtils {
                     }
                 }
             } else {
+                if (DEBUG) {
+                    System.out.println(TAG + "Getting criteria for Class " + tmp.getName() + " from CriterionManager.");
+                }
                 for (Map.Entry<Integer, SortingCriterion> entry : map.entrySet()) {
                     SortingCriterion prev = result.put(entry.getKey(), entry.getValue());
                     if (prev != null) {

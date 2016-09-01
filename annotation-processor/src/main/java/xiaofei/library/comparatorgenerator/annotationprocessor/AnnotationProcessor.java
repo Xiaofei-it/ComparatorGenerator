@@ -96,7 +96,7 @@ public class AnnotationProcessor extends AbstractProcessor {
                                     Criterion annotation = element.getAnnotation(Criterion.class);
                                     Order order = annotation.order();
                                     int priority = annotation.priority();
-                                    writer.write("        putCriterionForMethod(" + className + ".class, \"" + methodName + "\", " + priority + ", Order." + order + ");\n");
+                                    writer.write("            putCriterionForMethod(" + className + ".class, \"" + methodName + "\", " + priority + ", Order." + order + ");\n");
                                 }
                             } else {
                                 messager.printMessage(Diagnostic.Kind.ERROR, "ERROR1");
@@ -114,7 +114,7 @@ public class AnnotationProcessor extends AbstractProcessor {
                                 Criterion annotation = element.getAnnotation(Criterion.class);
                                 Order order = annotation.order();
                                 int priority = annotation.priority();
-                                writer.write("        putCriterionForField(" + className + ".class, \"" + fieldName + "\", " + priority + ", Order." + order + ");\n");
+                                writer.write("            putCriterionForField(" + className + ".class, \"" + fieldName + "\", " + priority + ", Order." + order + ");\n");
                             }
                         } else {
                             messager.printMessage(Diagnostic.Kind.ERROR, "ERROR4");
@@ -145,9 +145,14 @@ public class AnnotationProcessor extends AbstractProcessor {
         writer.write("public class CriterionManager {\n\n");
         writer.write("    private static ConcurrentHashMap<Class<?>, ConcurrentHashMap<Integer, SortingCriterion>> maps = new ConcurrentHashMap<Class<?>, ConcurrentHashMap<Integer, SortingCriterion>>();\n\n");
         writer.write("    static {\n");
+        writer.write("        try {\n");
     }
 
     private void writeFileEnd(Writer writer) throws IOException {
+        // There may be NPE thrown from FieldMember, so catch it here.
+        writer.write("        } catch (Throwable t) {\n");
+        writer.write("            t.printStackTrace();\n");
+        writer.write("        }\n");
         writer.write("    }\n\n");
         writer.write("    private static void putCriterionForMethod(Class<?> clazz, String methodName, int priority, Order order) {\n");
         writer.write("        maps.putIfAbsent(clazz, new ConcurrentHashMap<Integer, SortingCriterion>());\n");

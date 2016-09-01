@@ -21,6 +21,7 @@ package xiaofei.library.comparatorgenerator.internal;
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
+import java.lang.annotation.Annotation;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
@@ -36,19 +37,28 @@ public class AnnotationUtils {
 
     static {
         try {
+            // The class can be found.
             Class<?> clazz = Class.forName("xiaofei.library.comparatorgenerator.CriterionManager");
-            method = clazz.getDeclaredMethod("getCriteria", Class.class);
             if (DEBUG) {
-                System.out.println(TAG + "Find Class " + clazz.getName());
+                if (clazz != null) {
+                    System.out.println(TAG + "Find Class " + clazz.getName());
+                } else {
+                    System.out.println(TAG + "Cannot find class and Class.forName returns null.");
+                }
             }
+            // The method cannot be found.
+            method = clazz.getDeclaredMethod("getCriteria", Class.class);
         } catch (ClassNotFoundException e) {
-            e.printStackTrace();;
+            if (DEBUG) {
+                System.out.println(TAG + "Cannot find CriterionManager");
+            }
+            e.printStackTrace();
         } catch (NoSuchMethodException e) {
             e.printStackTrace();
         }
     }
 
-    private static Method method;
+    private static Method method = null;
 
     private AnnotationUtils() {}
 
@@ -57,7 +67,9 @@ public class AnnotationUtils {
         for (Class<?> tmp = clazz; tmp != null && tmp != Object.class; tmp = tmp.getSuperclass()) {
             Map<Integer, SortingCriterion> map = null;
             try {
-                map = (Map<Integer, SortingCriterion>) method.invoke(null, tmp);
+                if (method != null) {
+                    map = (Map<Integer, SortingCriterion>) method.invoke(null, tmp);
+                }
             } catch (InvocationTargetException e) {
                 e.printStackTrace();
             } catch (IllegalAccessException e) {
@@ -69,6 +81,15 @@ public class AnnotationUtils {
                 }
                 Field[] fields = tmp.getDeclaredFields();
                 for (Field field : fields) {
+                    if (DEBUG) {
+                        System.out.println(TAG + "Finding criteria in Class " + tmp.getName() + " on Field " + field.getName() + " Type " + field.getType().getName());
+                        Annotation[] annotations = field.getDeclaredAnnotations();
+                        for (Annotation annotation : annotations) {
+                            if (annotation instanceof Criterion) {
+                                System.out.println(TAG + "JJJJJJJJJJJ");
+                            }
+                        }
+                    }
                     Criterion criterion = field.getAnnotation(Criterion.class);
                     if (criterion != null) {
                         int priority = criterion.priority();

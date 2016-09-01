@@ -28,9 +28,9 @@ public class Test01 {
 
     static class A {
         @Criterion(priority = 1, order = Order.DESCENDING)
-        int i;
+        Integer i;
         @Criterion(priority = 0, order = Order.ASCENDING)
-        int j;
+        Integer j;
         //@Criterion(priority = -1)
         String b;
     }

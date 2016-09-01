@@ -3,7 +3,7 @@ An easy-to-use helper class for generating a comparator for a specified class. U
 
 [Chinese Readme 中文文档](https://github.com/Xiaofei-it/ComparatorGenerator/blob/master/README-ZH-CN.md)
 
-##Features
+## Features
 
 A comparator is needed when sorting a list of elements of a specified class. But it is difficult to write a comparator, especially in multiple-criteria sorting.
 
@@ -18,7 +18,7 @@ dependencies {
 }
 ```
 
-##Maven
+## Maven
 
 ```
 <dependency>
@@ -30,7 +30,7 @@ dependencies {
 ```
 
 
-##Usage
+## Usage
 
 Often, elements are sorted by the values of some specified fields or the return values of some specified methods. A field or a method has a corresponding criterion. A criterion has a priority. The field or the method with a higher priority will be considered first when sorting. A criterion has also a sorting order, which, by default, is ascending.
 

@@ -136,12 +136,14 @@ public class AnnotationProcessor extends AbstractProcessor {
 
     private void writeFileBeginning(Writer writer) throws IOException {
         writer.write("package xiaofei.library.comparatorgenerator;\n\n");
+        writer.write("import android.support.annotation.Keep;\n\n");
         writer.write("import java.util.concurrent.ConcurrentHashMap;\n\n");
         writer.write("import xiaofei.library.comparatorgenerator.Criterion;\n");
         writer.write("import xiaofei.library.comparatorgenerator.Order;\n");
         writer.write("import xiaofei.library.comparatorgenerator.internal.FieldMember;\n");
         writer.write("import xiaofei.library.comparatorgenerator.internal.MethodMember;\n");
         writer.write("import xiaofei.library.comparatorgenerator.internal.SortingCriterion;\n\n");
+        writer.write("@Keep\n");
         writer.write("public class CriterionManager {\n\n");
         writer.write("    private static ConcurrentHashMap<Class<?>, ConcurrentHashMap<Integer, SortingCriterion>> maps = new ConcurrentHashMap<Class<?>, ConcurrentHashMap<Integer, SortingCriterion>>();\n\n");
         writer.write("    static {\n");

@@ -48,6 +48,7 @@ public class TypeUtils {
     public static List<Method> getNoArgMethods(Class<?> clazz) {
         List<Method> result = new ArrayList<Method>();
         Method[] methods = clazz.getDeclaredMethods();
+        // We will get nothing if ProGuard is used.
         for (Method method : methods) {
             if (!method.isSynthetic() && isNoArgMethod(method)) {
                 result.add(method);

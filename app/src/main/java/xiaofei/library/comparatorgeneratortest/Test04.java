@@ -18,6 +18,8 @@
 
 package xiaofei.library.comparatorgeneratortest;
 
+import android.support.annotation.Keep;
+
 import java.util.Arrays;
 import java.util.Comparator;
 
@@ -53,6 +55,7 @@ class Item3 {
     }
 }
 
+@Keep
 class Item4 {
 
     int price;

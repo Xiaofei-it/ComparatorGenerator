@@ -15,3 +15,10 @@
 #-keepclassmembers class fqcn.of.javascript.interface.for.webview {
 #   public *;
 #}
+
+-keep class xiaofei.library.comparatorgeneratortest.*{*;}
+
+-keep class xiaofei.library.comparatorgenerator.*{*;}
+
+# We should keep the classes who have methods annotated with @Criterion.
+

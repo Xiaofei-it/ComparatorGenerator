@@ -95,7 +95,7 @@ public class ComparatorGenerator<T> {
         criteria.addAll(this.criteria.values());
         if (criteria.isEmpty()) {
             throw new RuntimeException(
-                    "There is no sorting criterion specified. "
+                    "There is no sorting criterion specified for Class " + clazz.getName() + ". "
                             + "Please specify at least one criterion "
                             + "by adding @Criterion on the corresponding field or method or using "
                             + "ComparatorGenerator.addCriterion(int, String, Order).");

@@ -35,30 +35,20 @@ public class AnnotationUtils {
 
     private static final boolean DEBUG = true;
 
+    private static Method method = null;
+
     static {
         try {
-            // The class can be found.
+            // The class can be found if ProGuard is used.
             Class<?> clazz = Class.forName("xiaofei.library.comparatorgenerator.CriterionManager");
-            if (DEBUG) {
-                if (clazz != null) {
-                    System.out.println(TAG + "Find Class " + clazz.getName());
-                } else {
-                    System.out.println(TAG + "Cannot find class and Class.forName returns null.");
-                }
-            }
-            // The method cannot be found.
+            // The method cannot be found if ProGuard is used.
             method = clazz.getDeclaredMethod("getCriteria", Class.class);
         } catch (ClassNotFoundException e) {
-            if (DEBUG) {
-                System.out.println(TAG + "Cannot find CriterionManager");
-            }
             e.printStackTrace();
         } catch (NoSuchMethodException e) {
             e.printStackTrace();
         }
     }
-
-    private static Method method = null;
 
     private AnnotationUtils() {}
 
@@ -81,15 +71,7 @@ public class AnnotationUtils {
                 }
                 Field[] fields = tmp.getDeclaredFields();
                 for (Field field : fields) {
-                    if (DEBUG) {
-                        System.out.println(TAG + "Finding criteria in Class " + tmp.getName() + " on Field " + field.getName() + " Type " + field.getType().getName());
-                        Annotation[] annotations = field.getDeclaredAnnotations();
-                        for (Annotation annotation : annotations) {
-                            if (annotation instanceof Criterion) {
-                                System.out.println(TAG + "JJJJJJJJJJJ");
-                            }
-                        }
-                    }
+                    // The following statement may throw NoSuchFieldError if ProGuard is used.
                     Criterion criterion = field.getAnnotation(Criterion.class);
                     if (criterion != null) {
                         int priority = criterion.priority();

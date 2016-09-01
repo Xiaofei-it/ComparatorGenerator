@@ -25,16 +25,11 @@ import java.util.List;
 
 public class TypeUtils {
 
-    private static final String TAG = "ComparatorGenerator: ";
-
-    private static final boolean DEBUG = true;
-
     private TypeUtils() {}
 
     public static Field getFieldIncludingSuperClass(Class<?> clazz, String fieldName) {
-        if (DEBUG) {
-            System.out.println(TAG + "Finding field " + fieldName + " in " + clazz.getName());
-        }
+        // Annotation processor runs before ProGuard.
+        // So no field will be found.
         for (Class<?> tmp = clazz; tmp != null && tmp != Object.class; tmp = tmp.getSuperclass()) {
             try {
                 return clazz.getDeclaredField(fieldName);
@@ -62,9 +57,6 @@ public class TypeUtils {
     }
 
     public static Method getMethodIncludingSuperClass(Class<?> clazz, String methodName) {
-        if (DEBUG) {
-            System.out.println(TAG + "Finding method " + methodName + " in " + clazz.getName());
-        }
         for (Class<?> tmp = clazz; tmp != null && tmp != Object.class; tmp = tmp.getSuperclass()) {
             try {
                 return clazz.getDeclaredMethod(methodName);
